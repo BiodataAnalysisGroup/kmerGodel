@@ -6,6 +6,7 @@ The input of the project should be a single .fasta file.
 
 ## Run command from terminal
 cd ~/kmerGodel/
+
 python run.py kmin kmax path/to/input_file.fasta
 
 ## Singularity definition file folder
