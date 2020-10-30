@@ -5,8 +5,8 @@ The aim of the project is to create a dictionary of all k-mers within an input f
 The input of the project should be a single .fasta file.
 
 ## Run command from terminal
-cd ~/kmerGodel/                                         # Change directory to the project path
-python run.py kmin kmax path/to/input_file.fasta        # kmin and kmax are integers
+cd ~/kmerGodel/
+python run.py kmin kmax path/to/input_file.fasta
 
 ## Singularity definition file folder
 Inside the folder there is a .def file that creates a singularity image file for the project.
