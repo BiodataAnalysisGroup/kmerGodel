@@ -1,0 +1,46 @@
+Bootstrap: docker
+From: ubuntu:latest
+
+%pre
+# Before install (host)
+
+%setup
+# After install (host)
+
+%post
+# After install (guest)
+	apt update
+	apt-get --assume-yes install python3.6
+	apt --assume-yes install python3-pip
+	cd /opt/home/usr
+	pip3 install nltk
+	pip3 install numpy
+	pip3 install pandas
+	
+
+%test
+# Test to run in order to ensure working environment
+	exit 0
+
+%runscript
+# Script to run when executing environment
+	cd /opt/home/usr
+	python3 -u run.py "$@"
+
+%startscript
+# Script to run when executing as instance
+
+%labels
+	author BioStatsAnalysis Group
+
+%files
+# Files to copy from the hosts system
+	GodelNumbers /opt/home/usr
+
+%environment
+# Environmental variables
+	export PYTHONPATH=${PYTHONPATH:-"/usr/local/python3"}
+	export SINGULARITY_BIND="/inputs:/opt/home/usr/files,/outputs:/opt/home/usr/results"
+
+%help
+# To show when help for the image is requested

@@ -1,0 +1,1 @@
+singularity run --bind /home/togkousa/INEBwork/kmerGodel/inputs:/opt/home/usr/files,/home/togkousa/INEBwork/kmerGodel/outputs:/opt/home/usr/results kmergodel.sif 4 6 /home/togkousa/INEBwork/kmerGodel/inputs/sars_1000.fasta
