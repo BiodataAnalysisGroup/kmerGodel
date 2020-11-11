@@ -60,7 +60,7 @@ for (enc in encodings){
 
 rownames(d) <- kvals
 colnames(d) <- legend_list
-write.csv("plots/norm_dist_divergence.csv", as.data.frame(d))
+write.csv(as.data.frame(d), "plots/norm_dist_divergence.csv")
 
 
 png(file='plots/DivergenceFromNormDist.png', width=1500, height=1200)
