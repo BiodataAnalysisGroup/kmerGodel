@@ -26,6 +26,14 @@ bibliography: paper.bib
 
 The ELIXIR BioHackathon 2020 was a virtual event that took place from 9th to 13th of November. Overall, the event involved forty one projects; through Project #39 "[Unlock the value of your data computing at the edge](https://www.biohackathon-europe.org/projects.html)" participants were provided access to ATOS Edge computing, in order to assess its applicability and relevance towards addressing challenges for the analysis of biological Big Data. Our team, representing the [BioData Analysis Group](https://biodataanalysisgroup.github.io/), at [INAB](https://inab.certh.gr/)|[CERTH](https://www.certh.gr/), used the offered resources to evaluate the performance and overall suitability of ATOS Edge in the context of our work on k-mer-based models of sequence data, towards facilitating the application of Machine Learning methods.
 
+The first part of our work was based on gödel encoding, a process that uses Gödel numbers in order to create a unique numerical representation of each nucleotide sequence ([preprint](https://arxiv.org/abs/1909.13574)). The target dataset consisted of approximately 13.000 SARS-CoV-2 sequences ([URL](https://www.ncbi.nlm.nih.gov/sars-cov-2/)) and the analysis stage included the construction of k-mer matrices (Table 1). For a fixed value of k, we calculated the multiplicity of every single identified k-mer within the input dataset, as well as the corresponding gödel number and its relative entropy. The analysis was conducted for a range of k values, from k=4 tok=100. The size of output files grows linearly with respect to k, starting from ~100 KB and up to ~200 MB. Finally, the execution time on the provided resources ranged between 6 and 8 hours.
+
+![An example table consisted of four columns: k-mer, multiplicity, gödel number and entropy. \label{fig} ](table_1.png)
+
+Additionally, and for a given value of k, we counted the k-mers per sequence (Table 2), with the aim of using the k-mer as potential features in a machine earning process. In the test case, the output comprised 29 matrices, one for each  k value in the range [4,32], with the output size increasing linearly, from ~11 MB to ~4.1 GB. The execution time was estimated to be around 26-30 hours, with an average value of 28 hours
+
+![An example data matrix that uses k-mers as features. \label{fig} ](table_2.png)
+
 
 ## Subsection level 2
 
