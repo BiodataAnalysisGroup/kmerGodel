@@ -35,35 +35,10 @@ Additionally, and for a given value of k, we counted the k-mers per sequence (Ta
 ![An example data matrix that uses k-mers as features. \label{fig} ](table_2.png)
 
 
-## Subsection level 2
+# Benefits of using ATOS Edge
 
-Please keep sections to a maximum of three levels, even better if only two levels.
+Our experience using ATOS Edge was very positive. At a practical level, data processing and computing are completely separated, bringing the data processing level closer to the user. In this way, there is no need to constantly upload and download big data to the computing element. Simultaneously it provided the ability to handle jobs (such as adding RAM amount, execution time, canceling etc) during the execution stage. In our understanding, the user is also free to select the components of the runtime machine, combining different CPUs, GPUs and RAM for each job separately, which they also may be physically located at different points, however, this is an aspect that we haven’t tested. One disadvantage is that there is no real-time console that the user can utilize to monitor and check the output of the program. However, any standard output of a given slurm job is listed in an .out file inside the working directory, which somewhat addresses this.
 
-### Subsection level 3
-
-Please keep sections to a maximum of three levels.
-
-## Tables, figures and so on
-
-Please remember to introduce tables (see Table 1) before they appear on the document. We recommend to center tables, formulas and figure but not the corresponding captions. Feel free to modify the table style as it better suits to your data.
-
-Table 1
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
-Remember to introduce figures (see Figure 1) before they appear on the document. 
-
-![BioHackrXiv logo](./biohackrxiv.png)
- 
-Figure 1. A figure corresponding to the logo of our BioHackrXiv preprint.
-
-# Other main section on your manuscript level 1
-
-Feel free to use numbered lists or bullet points as you need.
-* Item 1
-* Item 2
 
 # Discussion and/or Conclusion
 
