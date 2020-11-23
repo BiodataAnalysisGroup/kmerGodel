@@ -7,7 +7,7 @@ tags:
   - Gödel numbers
 authors:
   - name: Anastasis Togkousidis
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0003-4306-3709
     affiliation: 1
   - name: Nikos Pechlivanis
     orcid: 0000-0000-0000-0000
