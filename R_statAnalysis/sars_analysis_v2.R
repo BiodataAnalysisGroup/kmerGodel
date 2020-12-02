@@ -1,26 +1,29 @@
 # clear
-cat("\014")
-rm(list = ls())
-dev.off(dev.list()["RStudioGD"])
+#cat("\014")
+#rm(list = ls())
+#dev.off(dev.list()["RStudioGD"])
 
 # Source
-source("helpFunctions.R")
+source("helpFunctions_v2.R")
 
 # libraries
 library(LaplacesDemon)
 library(combinat)
+library(future.apply)
+plan(multiprocess(workers = 2))
+library(data.table)
+library(stringr)
 
-# Directory
 # Please change the input directory and put an '/' in the end
-directory <- '/home/togkousa/INEBwork/to_nikos/input/'
+directory <- '/media/togkousa/Transcend/INEBwork/to_server/data/'
 
 ################################################
 ########## SARS ANALYSIS #######################
 
 # Please select k-values
-kmin <- 4
-kmax <- 6
-kvals = c(kmin:kmax)
+kmin <- 47
+kmax <- 70
+kvals = kmin:kmax
 
 dnaBases <- c("A", "C", "G", "T")
 encodings <- permn(c(1,2,3,4))
@@ -32,13 +35,13 @@ dir.create('plots')
 for (enc in encodings){
   perm_num <- perm_num + 1
   
-  kld_vector_sars <- c()
+  # kld_vector_sars <- c()
   legend_list <- c(legend_list, paste(enc, collapse = ''))
-    for (k in kvals){
-    # Create dir
+  
+  kld_vector_sars <- future_lapply(kvals, function(k) {
+    
     folder <- paste('plots/sars_',paste(enc, collapse = '') , sep = '')
     dir.create(folder)
-
     
     # File
     myfile <- paste(directory,"complete_genome_SARS-CoV-2_info_k=", k, ".txt", sep = "")
@@ -49,20 +52,16 @@ for (enc in encodings){
     
     # Distribution
     print(paste(k, perm_num, sep = ','))
-    plotDistributionHistogram(mydata, folder)
+    plotDistributionHistogram(mydata, folder, k)
     
     # Distance from normal distribution
-    kld_vector_sars <- normDist(mydata, kld_vector_sars)
-    
-    # Spectrum Histogram
-    # counts_info <- plotSpectrumHistogram(mydata, folder)
-    
-    # Distributions for Specific Counts
-    # distributionsOfSpecificCounts(mydata, k, 'sars', enc)
-  }
+    distance <- normDist_lapply(mydata)
+    distance
+  })
+  
   
   d = cbind(d, kld_vector_sars)
-
+  
 }
 
 rownames(d) <- kvals
