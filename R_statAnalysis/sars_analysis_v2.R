@@ -9,9 +9,9 @@ source("helpFunctions_v2.R")
 # libraries
 library(LaplacesDemon)
 library(combinat)
-library(future.apply)
-plan(multiprocess(workers = 2))
-library(data.table)
+#library(future.apply)
+#plan(multiprocess(workers = 2))
+#library(data.table)
 library(stringr)
 
 # Please change the input directory and put an '/' in the end
@@ -21,8 +21,8 @@ directory <- '/media/togkousa/Transcend/INEBwork/to_server/data/'
 ########## SARS ANALYSIS #######################
 
 # Please select k-values
-kmin <- 47
-kmax <- 70
+kmin <- 71
+kmax <- 72
 kvals = kmin:kmax
 
 dnaBases <- c("A", "C", "G", "T")
@@ -38,7 +38,7 @@ for (enc in encodings){
   # kld_vector_sars <- c()
   legend_list <- c(legend_list, paste(enc, collapse = ''))
   
-  kld_vector_sars <- future_lapply(kvals, function(k) {
+  kld_vector_sars <- lapply(kvals, function(k) {
     
     folder <- paste('plots/sars_',paste(enc, collapse = '') , sep = '')
     dir.create(folder)
