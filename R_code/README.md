@@ -1,5 +1,5 @@
- # Statistical Analysis
-Constructing the "divergence diagramm" for all possible permutations in godel encoding.
+ # Overview
+This folder contains all the necessary R scripts in order to implement the statistical analysis of Gödel Number distributions, which is described in the first section of [this](https://docs.google.com/document/d/1NmUVwm7LgNPBs8XDQ6K_F3AxtICaeUjSTDy3h5Sd0Wk/edit?usp=sharing) report. 
 
 ## How to execute
 - Change directory to ~/kmerGodel/R_statAnalysis folder.
