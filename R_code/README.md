@@ -6,12 +6,10 @@ This folder contains all the necessary R scripts in order to implement the stati
 - Output: The output is placed inside the 'plots/' direcoty and it depends on the script that you execute. Generally, it consists of plots inside the 'plots/sars_{encoding}/' directories - one folder for each gödel encoding - and .csv files, as it is mentioned below.
 
 # Report details
-Concerning the plots presented 
-
-- Input: The input
+The results that presented in the report came from the analysis of a dataset consisting of approximately 13.000 SARS-CoV-2 genome sequences. THe total output is stored in my personal [drive](https://drive.google.com/drive/folders/11mT62OMDZwlY3J5LUcFVUbz5ubG6PLY8?usp=sharing).
 
 # In this Repository
-- Input:
+For the purpose of this repository, we used a subset of the total dataset consisting of 1.000 SARS-CoV-2 sequences. The matrices stored inside the 'input/' folder are the four-column matrices, which were created from the execution of kmer_godel_numbers.ipynb script, for a k-range 4 to 20.
 
 
 ## How to execute
