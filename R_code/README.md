@@ -34,7 +34,46 @@ For a better understanding of the purpose of each script, please checkout the [r
 
 
 ## jeffreys_norm_dist_divergence.R
-- **Summary**: It calculates ...
-- **Input**: It calculates ...
-- **Parameters to specify**: It calculates ...
+ - **Summary**: For a specified range of k-values and for all the 24 possible encodings, the script calculates the Jeffreys divergence between gödel number distributions and the corresponding normal distributions.
+ - **Input**: Four-column matrices, one for each k-value.
+ - **Output**: 
+   1. A .csv file containing all the Jeffreys divergence values from normal distribution, which is stored isnide 'plots/Jeffreys/' directory. 
+   2. Plots of gödel number PDFs inside the 'plots/sars_{encoding}/' directories.
+ - **Parameters to specify**: 
+   1. Number of processors to work (line 14)
+   2. Input directory (line 19, please don't forget to put an '/' at the end)
+   3. Range of k-values (lines 25-27)
+   4. Input files code name (line 52)
+   5. Output filename (line 74)
 
+
+## jsd_norm_dist_divergence.R
+ - **Summary**: For a specified range of k-values and for all the 24 possible encodings, the script calculates the JSD divergence between gödel number distributions and the corresponding normal distributions.
+ - **Input**: Four-column matrices, one for each k-value.
+ - **Output**: 
+   1. A .csv file containing all the JSD divergence values from normal distribution, which is stored isnide 'plots/JSD/' directory. 
+   2. Plots of gödel number PDFs inside the 'plots/sars_{encoding}/' directories.
+ - **Parameters to specify**: 
+   1. Number of processors to work (line 14)
+   2. Input directory (line 19, please don't forget to put an '/' at the end)
+   3. Range of k-values (lines 25-27)
+   4. Input files code name (line 54)
+   5. Output filename (line 76)
+
+
+## kld_norm_dist_divergence.R
+ - **Summary**: For a specified range of k-values and for all the 24 possible encodings, the script calculates the KLD divergence between gödel number distributions and the corresponding normal distributions.
+ - **Input**: Four-column matrices, one for each k-value.
+ - **Output**: 
+   1. A .csv file containing all the KLD divergence values from normal distribution, which is stored isnide 'plots/KLD/' directory. 
+   2. Plots of gödel number PDFs inside the 'plots/sars_{encoding}/' directories.
+ - **Parameters to specify**: 
+   1. Number of processors to work (line 13)
+   2. Input directory (line 18, please don't forget to put an '/' at the end)
+   3. Range of k-values (lines 24-26)
+   4. Input files code name (line 51)
+   5. Output filename (line 74)
+
+
+
+   
