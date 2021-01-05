@@ -84,7 +84,7 @@ For a better understanding of the purpose of each script, please checkout the [r
  - **Parameters to specify**: 
    1. Number of processors to work (line 14)
    2. Input directory (line 21, please don't forget to put an '/' at the end)
-   3. Range of k-values (lines 25-27)
+   3. Range of k-values (lines 27-29)
    4. Number of strains (line 32)
    5. Input files code name (line 56)
    6. Cut-off (line 69 -  the default is defined right in the middle)
@@ -99,10 +99,12 @@ For a better understanding of the purpose of each script, please checkout the [r
    2. Plots of the two distributions and the k-mers spectrums as well, inside the 'plots/sars_{encoding}/' directories.
  - **Parameters to specify**: 
    1. Number of processors to work (line 14)
-   2. Input directory (line 19, please don't forget to put an '/' at the end)
-   3. Range of k-values (lines 25-27)
-   4. Input files code name (line 52)
-   5. Output filename (line 74)
+   2. Input directory (line 21, please don't forget to put an '/' at the end)
+   3. Range of k-values (lines 27-29)
+   4. Number of strains (line 32)
+   5. Input files code name (line 56)
+   6. Cut-off (line 69 -  the default is defined right in the middle)
+   7. Output filename (line 83)
 
 
 ## jsd_norm_dist_divergence.R
@@ -113,10 +115,10 @@ For a better understanding of the purpose of each script, please checkout the [r
    2. Plots of the two distributions and the k-mers spectrums as well, inside the 'plots/sars_{encoding}/' directories.
  - **Parameters to specify**: 
    1. Number of processors to work (line 14)
-   2. Input directory (line 19, please don't forget to put an '/' at the end)
-   3. Range of k-values (lines 25-27)
-   4. Input files code name (line 54)
-   5. Output filename (line 76)
+   2. Input directory (line 21, please don't forget to put an '/' at the end)
+   3. Range of k-values (lines 27-29)
+   4. Number of strains (line 32)
+   5. Input files code name (line 56)
+   6. Cut-off (line 69 -  the default is defined right in the middle)
+   7. Output filename (line 83)
 
-
-   
