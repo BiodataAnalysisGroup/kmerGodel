@@ -23,14 +23,14 @@ For a better understanding of the purpose of each script, please checkout the [r
  - **Summary**: For a specified range of k-values and for all the 24 possible encodings, the script calculates the Hellinger divergence between gödel number distributions and the corresponding normal distributions.
  - **Input**: Four-column matrices, one for each k-value.
  - **Output**: 
-  1. A .csv file containing all the hellinger divergence values from normal distribution, which is stored isnide 'plots/hellinger/' directory. 
-  2. Plots of gödel number PDFs inside the 'plots/sars_{encoding}/' directories.
+   1. A .csv file containing all the hellinger divergence values from normal distribution, which is stored isnide 'plots/hellinger/' directory. 
+   2. Plots of gödel number PDFs inside the 'plots/sars_{encoding}/' directories.
  - **Parameters to specify**: 
-  1. Number of processors to work (line 13)
-  2. Input directory (line 19, please don't forget to put an '/' at the end)
-  3. Range of k-values (lines 25-27)
-  4. Input files code name (line 52)
-  5. Output filename (line 75)
+   1. Number of processors to work (line 13)
+   2. Input directory (line 19, please don't forget to put an '/' at the end)
+   3. Range of k-values (lines 25-27)
+   4. Input files code name (line 52)
+   5. Output filename (line 75)
 
 
 ## jeffreys_norm_dist_divergence.R
