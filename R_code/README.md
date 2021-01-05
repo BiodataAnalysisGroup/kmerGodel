@@ -122,3 +122,25 @@ For a better understanding of the purpose of each script, please checkout the [r
    6. Cut-off (line 69 -  the default is defined right in the middle)
    7. Output filename (line 83)
 
+
+## normDist_helping_functions.R
+ - **Summary**: A script containing all the necessary functions calculate the divergence of gödel number distributions from the corresponding normal ones.
+
+
+## two_dists_helping_functions.R
+ - **Summary**: A script containing all the necessary functions calculate the divergence between the two gödel number distributions, the one consisting of k-mers that appears "many" times and the second one consisting k-mers that appear "only a few" times (Checkout the [report](https://docs.google.com/document/d/1NmUVwm7LgNPBs8XDQ6K_F3AxtICaeUjSTDy3h5Sd0Wk/edit?usp=sharing)).
+
+
+## plotting.R
+ - **Summary**: A script that creates all the figures related with the divergence-between-distributions stuff.
+ - **Input**: A .csv file
+ - **Output**: Figures
+ - **Parameters to specify**: 
+   1. Input file path (line 10)
+   2. Output file path (line 13)
+   3. Limits of y-axis (line 23)
+   4. Title of plot (line 26)
+
+
+## heatmap.R
+- **Summary**: Code related with the construction of heatmap and clustering of encodings. Checkout [this](https://docs.google.com/presentation/d/115eN2muqNJGCIvBslBghr-9Vd1Vuk8JTxrIaJYzttXo/edit?usp=sharing) presentation for more details.
